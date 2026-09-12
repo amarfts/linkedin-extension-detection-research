@@ -22,8 +22,8 @@
       "source_label": "console-probes.png",
       "bytes": 89451,
       "sha256": "f55524868a906045f0e482794842c1263989dadb83c27b256225aed3b92bfad8",
-      "publication_treatment": "Omitted to minimize unnecessary browser-interface context; failure evidence retained in the separate text stack.",
-      "repository_path": null
+      "publication_treatment": "Reviewed visually and reproduced unchanged. No readable account or session identifiers; an AdBlock DevTools tab remains visible.",
+      "repository_path": "evidence/console-probes.png"
     },
     {
       "role": "guard-screenshot",

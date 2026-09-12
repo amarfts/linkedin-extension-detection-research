@@ -32,6 +32,10 @@ The initial symptom was repeated console output of this form:
 GET chrome-extension://invalid/ net::ERR_FAILED
 ```
 
+![Original DevTools console showing repeated failed extension requests](evidence/console-probes.png)
+
+*Figure 1. Original, unchanged DevTools screenshot. The visible error counter is not a measurement of the catalogue size. The DevTools tab bar includes an AdBlock tab.*
+
 The [captured failure stack](evidence/source-files/extension-probe-failure-stack.txt) preserves the request failure and its initiator chain. The [extracted probe records](evidence/probe-observations.json) retain the target URLs and original log line numbers; the full console log is omitted.
 
 Clicking an initiator first exposed a wrapper around `window.fetch`. That wrapper was not enough to explain the requests. Inspecting its arguments and following the caller revealed URLs built from specific extension IDs and paths. This changed the question from “Which extension is broken?” to “Which page code is testing these extension resources?”
@@ -116,7 +120,7 @@ Here `t` is additional metadata; the recorded detector output showed `{accountTy
 
 ![Original DevTools screenshot paused at the AedEvent nonempty-array guard](evidence/aed-event-guard.png)
 
-*Figure 1. Original DevTools screenshot of the active event guard. This screenshot establishes the code location, not the value of the result array.*
+*Figure 2. Original DevTools screenshot of the active event guard. This screenshot establishes the code location, not the value of the result array.*
 
 The saved console outputs, condensed to their relevant fields, were:
 
@@ -187,7 +191,7 @@ flowchart TD
   P --> R[Backend use and retention: not observed]
 ```
 
-*Figure 2. Reconstructed architecture. Dotted edges are conditional positive-result paths, not events observed in this test. Solid arrows in the transport portion describe inspected control flow, not proof of successful delivery for every event.*
+*Figure 3. Reconstructed architecture. Dotted edges are conditional positive-result paths, not events observed in this test. Solid arrows in the transport portion describe inspected control flow, not proof of successful delivery for every event.*
 
 ## 6. What is in the catalogue?
 
