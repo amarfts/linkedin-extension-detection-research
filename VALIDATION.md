@@ -12,5 +12,6 @@ Checked on 12 September 2026.
 - The original detector excerpt passes JavaScript syntax checking. The analyzer parses and executes successfully.
 - Known GUID/session-like and encoded-payload values extracted from private source material and the conversation are absent from the publication text. The full transport body and installed-extension inventory are omitted. Selected screenshots were reviewed visually.
 - The analyzer's regenerated outputs were compared byte-for-byte with the included analysis files.
+- The four original text attachments in `evidence/source-files/` were reviewed and copied under descriptive filenames. Their bytes match the original source-manifest hashes; source line numbers remain unchanged. Personal session payloads and the installed-extension inventory remain excluded.
 
 These checks establish internal consistency and publication handling. They do not repeat the original browser experiment, validate all product functionality, measure detector accuracy or prove server receipt. External pages may change after the source-check date.

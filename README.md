@@ -285,6 +285,7 @@ An extension inventory alone would not be a sound positive control: a controlled
 ## Publication materials
 
 - [Evidence ledger and redaction record](evidence/README.md)
+- [Original source excerpts and probe logs](evidence/source-files/README.md)
 - [Full catalogue analysis and verified examples](analysis/catalog-analysis.md)
 - [Annotated catalogue](analysis/catalog-annotated.json) and [machine-readable statistics](analysis/summary.json)
 - [Original exported catalogue](data/linkedin-extension-catalog.json) and [reviewed metadata](data/verified-extensions.json)

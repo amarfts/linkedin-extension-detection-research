@@ -1,23 +1,23 @@
 # Evidence ledger and publication record
 
-This ledger distinguishes recorded runtime observations, captured code, derived measurements and external statements. It includes selected excerpts and reviewed images. Full private conversation records and raw session logs are excluded.
+This ledger distinguishes recorded runtime observations, captured code, derived measurements and external statements. It includes selected excerpts and reviewed images. The four reviewed source-code and console-log attachments are available under descriptive names in [source-files](source-files/README.md). Full private conversation records, personal session payloads and the installed-extension inventory are excluded.
 
 ## Evidence map
 
 | ID | Claim or artifact | Source locator | Interpretation and limit |
 |---|---|---|---|
-| E01 | Repeated `chrome-extension://invalid/` failures | Original console screenshot; `Texte collé(3).txt`, beginning of file | Shows failed extension-resource requests and initiator chain. Counter is not a catalogue measurement. |
-| E02 | Specific ID/path probes | Large `Texte collé.txt` console attachment, 11,329 lines | Offline extraction finds 175 unique valid extension IDs in URLs. Every extracted ID/path pair matches the exported catalogue. Partial log only. |
+| E01 | Repeated `chrome-extension://invalid/` failures | Original console screenshot; [extension-probe-failure-stack.txt](source-files/extension-probe-failure-stack.txt), beginning of file | Shows failed extension-resource requests and initiator chain. Counter is not a catalogue measurement. |
+| E02 | Specific ID/path probes | [extension-probe-console-log.txt](source-files/extension-probe-console-log.txt), 11,329 lines | Offline extraction finds 175 unique valid extension IDs in URLs. Every extracted ID/path pair matches the exported catalogue. Partial log only. |
 | E03 | `o.length` returned `4934`; `o` exported as JSON | Conversation record: console command beginning `o.length`; later `copy(JSON.stringify(o, null, 2))`; `linkedin-extension-catalog.json` | File independently parses to 4,934 unique pairs, IDs sorted ascending. `copy()` returning `undefined` is not a failed export. |
-| E04 | Parallel and sequential active detectors | `Texte collé(2).txt`, lines 5–51; published [detectors.js](detectors.js) lines 1–47 | Runtime/browser guards, fetch predicates, stagger and idle-callback options, AedEvent guard. |
-| E05 | Passive detector | `Texte collé(2).txt`, lines 52–82; published [detectors.js](detectors.js) lines 48–78 | Recursive document traversal, token extraction and SpectroscopyEvent guard. |
+| E04 | Parallel and sequential active detectors | [extension-detection-source.txt](source-files/extension-detection-source.txt), lines 5–51; published [detectors.js](detectors.js) lines 1–47 | Runtime/browser guards, fetch predicates, stagger and idle-callback options, AedEvent guard. |
+| E05 | Passive detector | [extension-detection-source.txt](source-files/extension-detection-source.txt), lines 52–82; published [detectors.js](detectors.js) lines 48–78 | Recursive document traversal, token extraction and SpectroscopyEvent guard. |
 | E06 | Active result empty | Conversation record: copied console output ending `DETECTED: [] … COUNT: 0 METADATA: {accountType: 'FLAGSHIP'}` at source line 9545 | Runtime result at the active event guard. Object-inspector expansion and unrelated errors omitted in publication. |
 | E07 | Passive result empty | Conversation record: copied console output ending `SPECTROSCOPY: [] COUNT: 0 METADATA: {accountType: 'FLAGSHIP'}` at source line 9552 | Runtime result at the passive event guard. |
 | E08 | Tracking bridge and envelopes | Recorded `fireTrackingPayload`, inherited `fireEvent` and `fireEnvelope` output | Shows tracker delegation, envelope construction, optional delegate processing and transporter choice. Not a positive-result payload capture. |
 | E09 | Routing modes and both normal-priority assignments | Recorded `sendPayload`, `getRoutingDecision`, `performRouting`; two calls to `getTransporterForEvent` for the event names | Control/Enabled/Dual code and runtime assignments. Effective mode for an actual extension event was not recorded. |
 | E10 | Queue and batching | Recorded request-manager object and `packageRequest`, `attemptToFlush`, `flushEvents`, `sendWithRetry` | `batchSize: 30`, `flushDebounceDelayMs: 10000`; request packaging and retry split. No event-count or latency benchmark. |
 | E11 | Fetch helper and actual request arguments | Recorded `beaconFunc`, request `send`, transport-helper function source and `({url: e, body: t, headers: n, compress: i})` | Helper calls fetch, retries keepalive on rejection. Actual arguments name `LixTreatmentsEvent`, gzip configuration and the third endpoint. No successful extension-event delivery established. |
-| E12 | Broader browser-signalling context | `Texte collé(2).txt`, lines 251 onward; small `Texte collé.txt` source attachment | Nearby identifiers include `liedOS`, `liedBrowser`, `liedResolution`, `canvasHash`, `fontsHash`, `triggerApfc` and `triggerDnaApfcEvent`. Proximity is not evidence that all fields share the extension-event payload. |
+| E12 | Broader browser-signalling context | [extension-detection-source.txt](source-files/extension-detection-source.txt), lines 251 onward; [browser-integration-source.txt](source-files/browser-integration-source.txt) | Nearby identifiers include `liedOS`, `liedBrowser`, `liedResolution`, `canvasHash`, `fontsHash`, `triggerApfc` and `triggerDnaApfcEvent`. Proximity is not evidence that all fields share the extension-event payload. |
 | E13 | Incognito repetition | My account of the Incognito repetition in the conversation record | Self-reported repeated probing while logged in; no separately preserved controlled comparison. |
 
 Source line numbers are local to captured excerpts or the recorded pretty-printed build. They are not stable identifiers for current production code. The principal observed bundle label was `4j642gxwgan928vnbx21s18k0`; the tracking bridge appeared under `7ddirr8asjf574k2ir6adzica`.
@@ -65,7 +65,7 @@ The final request's encoded payload was readable as structured data; encoding wa
 | Two selected screenshots | Inspected visually and copied unchanged. They show source/console evidence without names, account IDs, session tokens or a personal URL bar. |
 | Other screenshots and raw conversation exports | Not included. No synthetic screenshots were substituted for missing runtime evidence. |
 
-The source inventory hashes in [source-manifest.json](source-manifest.json) support provenance checking without redistributing the private raw sources. Hashes do not authenticate the origin of the material and are not a substitute for retaining originals privately.
+The source inventory hashes in [source-manifest.json](source-manifest.json) identify both the included source files and excluded private artifacts. Each included file has a repository path; excluded artifacts have a null path. Hashes do not authenticate the origin of the material and are not a substitute for retaining originals privately.
 
 ## Limits of visual evidence
 

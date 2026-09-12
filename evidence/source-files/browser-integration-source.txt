@@ -1,0 +1,353 @@
+  initializeReCaptchaV3Integration(e, t) {
+                    const n = new MutationObserver(( () => {
+                        const e = document.querySelector(".grecaptcha-badge")
+                        e && (e.style.display = "none",
+                        n.disconnect())
+                    }
+                    ))
+                    n.observe(document.body, {
+                        childList: !0,
+                        subtree: !0
+                    })
+                    let i = "6LcIy_MqAAAAAMKiupFSbmzW3xjGSlIfRzNWYMjC"
+                    const r = document.createElement("script")
+                    r.src = "https://www.google.com/recaptcha/enterprise.js?render=" + i,
+                    document.head.appendChild(r),
+                    !0 === t.isSyncEnabledWithHeaders && r.addEventListener("load", ( () => {
+                        if (window.grecaptcha && window.grecaptcha.enterprise && window.grecaptcha.enterprise.ready) {
+                            let t = "onPageLoad"
+                            window.grecaptcha.enterprise.ready(( () => {
+                                window.grecaptcha.enterprise.execute(i, {
+                                    action: t
+                                }).then((n => {
+                                    const i = {
+                                        token: n,
+                                        expectedAction: t
+                                    }
+                                    globalThis.apfcDfRV3 = JSON.stringify(i),
+                                    void 0 !== this.syncCollectionHandler && this.syncCollectionHandler.setReCaptchaV3Payload(globalThis.apfcDfRV3),
+                                    e(o, globalThis.apfcDfRV3)
+                                }
+                                )).catch((t => {
+                                    const n = {
+                                        error: t
+                                    }
+                                    e(o, JSON.stringify(n))
+                                }
+                                ))
+                            }
+                            ))
+                        }
+                    }
+                    ))
+                }
+            }
+            if (V.prototype.reentry = function(e) {
+                globalThis.triggerApfc = null,
+                new V(e)
+            }
+            ,
+            V.prototype.reentryGlobalIntegration = function(e, t) {
+                globalThis.triggerDnaApfcEvent = null,
+                new V({
+                    globalIntegration: "enabled"
+                },e,t)
+            }
+            ,
+            V.prototype.reentryGlobalIntegrationOnDemand = function(e, t) {
+                if (void 0 === t || void 0 === e)
+                    return
+                let n = V.prototype.extractDataCookie()
+                !0 === t.onlyOnDemandFlow && null === n || (t.fpDataCookie = n,
+                null !== n && (t.enableOnDemandMode = !0),
+                V.prototype.reentryGlobalIntegration(e, t))
+            }
+            ,
+            V.prototype.extractDataCookie = function() {
+                let e = n.getItem("li_apfcdc")
+                if (!0 !== globalThis.__apfcRaceFixEnabled && n.deleteItem("li_apfcdc"),
+                !e || "" === e)
+                    return null
+                try {
+                    e = atob(e)
+                } catch (e) {
+                    return !0 === globalThis.__apfcRaceFixEnabled && n.deleteItem("li_apfcdc"),
+                    null
+                }
+                let t = e.split(":::")
+                if (t.length < 5)
+                    return !0 === globalThis.__apfcRaceFixEnabled && n.deleteItem("li_apfcdc"),
+                    null
+                const i = {}
+                return i.trackingId = t[0],
+                i.memberId = t[1],
+                i.sessionUrn = t[2],
+                i.collectionType = t[3],
+                i.apfcTypes = t[4].split(","),
+                i
+            }
+            ,
+            V.prototype.populateFpDataCookie = function(e, t) {
+                "object" == typeof e && "object" == typeof t && (e.FPDataCookie = t.fpDataCookie)
+            }
+            ,
+            V.prototype.isProd = function() {
+                return d()
+            }
+            ,
+            V.prototype.isEmpty = function(e) {
+                return e && 0 === Object.keys(e).length
+            }
+            ,
+            "undefined" != typeof globalThis && "undefined" != typeof document && "undefined" != typeof window) {
+                const e = 5
+                void 0 === globalThis.triggerDnaApfcEvent && (globalThis.triggerDnaApfcEvent = V.prototype.reentryGlobalIntegration),
+                void 0 === globalThis.triggerDnaApfcEventOnDemand && (globalThis.triggerDnaApfcEventOnDemand = V.prototype.reentryGlobalIntegrationOnDemand),
+                (void 0 === globalThis.maxApfcVersion || e > globalThis.maxApfcVersion) && (globalThis.maxApfcVersion = e,
+                globalThis.triggerDnaApfcEventOnDemandVersioned = V.prototype.reentryGlobalIntegrationOnDemand),
+                new V
+            }
+        }()
+        class i {
+            static isInitialized() {
+                return Boolean("undefined" != typeof globalThis && void 0 !== globalThis.triggerApfc && null !== globalThis.triggerApfc)
+            }
+            static setDf(e) {
+                globalThis.triggerApfc(e)
+            }
+        }
+        class r {
+            static collectFeatures(e, t) {
+                try {
+                    "undefined" != typeof globalThis && "undefined" != typeof document && "undefined" != typeof window && "undefined" !== globalThis.triggerDnaApfcEventOnDemandVersioned && globalThis.triggerDnaApfcEventOnDemandVersioned(t, e)
+                } catch (e) {}
+            }
+        }
+        const o = [{
+            id: "aaaeoelkococjpgngfokhbkkfiiegolp",
+            file: "icon/16.png"
+        }, {
+            id: "aabfjmnamlihmlicgeoogldnfaaklfon",
+            file: "Assets/48.png"
+        }, {
+            id: "aacbpggdjcblgnmgjgpkpddliddineni",
+            file: "sidebar.html"
+        }, {
+            id: "aafaommkbfcekikjalmjhimibmoppdpg",
+            file: "favicon.png"
+        }, {
+            id: "aagiojdphcbpafnpcniokdjcpfdphjgk",
+            file: "command-palette.html"
+        }, {
+            id: "aahmajgibhnecmilcmhhpijkemgpkojl",
+            file: "callback.html"
+        }, {
+            id: "aahogoflghpjkacghggcdcolicipmfpi",
+            file: "popup.html"
+        }, {
+            id: "aaibendpbhlnjijpkcclimejomaeenlk",
+            file: "icons/icon-16.png"
+        }, {
+            id: "aaiicdofoildjkenjdeoenfhdmajchlm",
+            file: "css/popup.css"
+        }, {
+            id: "aainjnbelendpglgndeecjljppfgapoh",
+            file: "images/ic_16.png"
+        }, {
+            id: "aajeioaakaifilihejpjaohomikfinhj",
+            file: "assets/icons/close.svg"
+        }, {
+            id: "aaknjchbdogbhlildibimnaimedkohjl",
+            file: "assets/auth.js"
+        }, {
+            id: "aaknmcfmalngompbpgmdgemkeonohiec",
+            file: "JokeBox128.png"
+        }, {
+            id: "aakppdkgemboafgliiilljegffnaokbp",
+            file: "vector-logo.png"
+        }, {
+            id: "aalmdggecnmihdnlloomafhmdlnjadgm",
+            file: "popover.htm"
+        }, {
+            id: "aaogndnbeimijicahonifekmiepidcoi",
+            file: "icons/icon16.png"
+        }, {
+            id: "aaoocbpffdjkmdhffdmblfoombokbmgn",
+            file: "icon/16.png"
+        }, {
+            id: "aaoogilmfmepcikcbpdphkljlndmajbh",
+            file: "img/logo-128.png"
+        }, {
+            id: "aapfglkgnhmiaabhiijkjpfmhllaodgp",
+            file: "assets/icon.png"
+        }, {
+            id: "aapnkmbnnnmejkpibpkicknnpffgdahe",
+            file: "assets/storage-B1iVRhWv.js"
+        }, {
+            id: "abbbgckfinjdbndjjjlpkkkoefklnaih",
+            file: "logo.png"
+        }, {
+            id: "abbebmjcogdiiloefijmdoekhienoiid",
+            file: "sidebar.html"
+        }, {
+            id: "abbmdcifbelkljlkhepiloikfbdbaggg",
+            file: "icons/icon16.png"
+        }, {
+            id: "abdalefggkmddnicfhgngmdoggcbopai",
+            file: "images/sync webhooks.svg"
+        }, {
+            id: "abejnndlhcocgbacajcleifecmkfkdmm",
+            file: "icons/icon16.png"
+        }, {
+            id: "abfehdblmlodmieppijjflnfbjhedcde",
+            file: "static/twitter_lib.js"
+        }, {
+            id: "abgkkhnmjpceoghkdlgnkoiebmmhlmkg",
+            file: "icons/16.png"
+        }, {
+            id: "abgngiafkeiflpophlalfljcoaebhjcg",
+            file: "contentscripts/GmailApi.js"
+        }, {
+            id: "abifklngoiboodedmgnebekjdfjbkohd",
+            file: "network-interceptor.js"
+        }, {
+            id: "abijkldnhhcihcfdalfmpbehenfnecmo",
+            file: "jobs-search-filter.7f007489.png"
+        }, {
+            id: "abkccndhocmfdombbpmnhfjidcdcjjeo",
+            file: "app_icons/16x16.png"
+        }, {
+            id: "ablcaiiaindkdmgafngbojbbggjocplc",
+            file: "icon/16.png"
+        }, {
+            id: "ablfgphjibcgmjcflkflckpoeojilojg",
+            file: "images/flowq-icon-white.png"
+        }, {
+            id: "ablhkpojbaponedckeonecobjinfjfml",
+            file: "icons/icon16.png"
+        }, {
+            id: "abmaifkamkbggpdfgejbilmakhaljkag",
+            file: "icons/icon-16.png"
+        }, {
+            id: "abmccifgihbepfbjnefeigpaloddckle",
+            file: "popup.js"
+        }, {
+            id: "abmlacmengcbgmnbcodefiefmalhdlnb",
+            file: "logo.png"
+        }, {
+            id: "abocjojdmemdpiffeadpdnicnlhcndcg",
+            file: "global/options/social_options.json"
+        }, {
+            id: "abookilbfdoeggkjjfmmlmnjpehbdall",
+            file: "coffee_logo.png"
+        }, {
+            id: "abpgbcahebodigblhhmldopobepeaohg",
+            file: "content.css"
+        }, {
+            id: "acabidngelopojhikjgkacpbjhgjebog",
+            file: "js/refresh.js"
+        }, {
+            id: "acackkdpiddedeionboakefkpfflkcfc",
+            file: "assets/favicon.png"
+        }, {
+            id: "acajjofblcpdnfgofcmhgnpcbfhmfldc",
+            file: "images/logo_text.svg"
+        }, {
+            id: "acanjkninedildifonghlpibjdgidnil",
+            file: "icons/16x16.png"
+        }, {
+            id: "acbkoglpbifchpodigkdamcmkakjenpk",
+            file: "popup/popup.html"
+        }, {
+            id: "acbkphafegncebaffomiebcnleepafcn",
+            file: "icons/icon-16.png"
+        }, {
+            id: "acbnaejhdjglfpndplmclndkohinjdmb",
+            file: "icon16.png"
+        }, {
+            id: "accbghdhdmdigaohfaggdcnjlifdclbc",
+            file: "resume/resume.html"
+        }, {
+            id: "acdeomnoanhhhljmkggdnicljabbnpia",
+            file: "icons/icon128.png"
+        }, {
+            id: "acdgkiapikhobpffkkkhohhkcmmkomif",
+            file: "logo.svg"
+        }, {
+            id: "aceohhcgmceafglcfiobamlbeklffhna",
+            file: "assets/wp-linkedin-main.js-B-nmK22z.js"
+        }, {
+            id: "acfhjcapfkflfjdgcmhfnjhmjhagllgn",
+            file: "index.css"
+        }, {
+            id: "acfiidfflepfnmbedjopglngghgkhfnp",
+            file: "icons/logo_48.png"
+        }, {
+            id: "acgbggfkaphffpbcljiibhfipmmpboep",
+            file: "icons/logo.png"
+        }, {
+            id: "acgbmlopjnfendnddifojknockhijpoe",
+            file: "saved-summaries.html"
+        }, {
+            id: "achoaangannjppfhglcainjfociamhah",
+            file: "images/logo.png"
+        }, {
+            id: "achpeojkcegknojbcoiblgikjiglccmm",
+            file: "src/content/content-styles.css"
+        }, {
+            id: "acibdnpkjbomcoklneaabcccpppfomgl",
+            file: "auth-callback.html"
+        }, {
+            id: "acjkfmnbignocfakclealmabijofkaba",
+            file: "public/icon-48.png"
+        }, {
+            id: "ackpianjmopgdngjckgaaogdhjejfobo",
+            file: "DEBUG.md"
+        }, {
+            id: "aclgcfmciekojimhckimdcapkejceili",
+            file: "index.html"
+        }, {
+            id: "aclggegmkfilhcaikepgpoihpnicbhfc",
+            file: "focus-blocked.html"
+        }, {
+            id: "acmbfggokaabfndehodmoekhccfnphel",
+            file: "dist/updates.html"
+        }, {
+            id: "acngkekifighepenafoohemoelhgkkjd",
+            file: "icons/icon-16.png"
+        }, {
+            id: "acnkkaihdkcocdoenhgdcgnmpobjmgdo",
+            file: "images/modalIcon.svg"
+        }, {
+            id: "acnniakgdcfllldlheplgpebcimfimde",
+            file: "editor/editor.html"
+        }, {
+            id: "acnphecabcfkmgimbdiiclonciljngkd",
+            file: "logo.c6e6db08.png"
+        }, {
+            id: "acpebglhoolnpnegdapfdhgbnpelafem",
+            file: "icons/icon-16.svg"
+        }, {
+            id: "acpmbealinmmhiideffdijdfmhbenail",
+            file: "assets/linkedin.js-8dRDnjB_.js"
+        }, {
+            id: "adcdekdoblmapmohiejneabifojccdoh",
+            file: "images/icon-48.png"
+        }, {
+            id: "adcghgjkkjkdmccfodohddgagangeacb",
+            file: "loading.svg"
+        }, {
+            id: "adeogdcibcngnkofabmpicgohlpcopmg",
+            file: "icons/16.png"
+        }, {
+            id: "adfonhibhmdhekclipmmabkkganiphbb",
+            file: "icons/icon16.png"
+        }, {
+            id: "adgpinopckdedhegddlhnafnkmojmkih",
+            file: "magnet-16.png"
+        }, {
+            id: "adhgifgmkblkmejdgiplocmdjbbibkip",
+            file: "src/ui/bubble/popup.html"
+        }, {
+            id: "adhmloemidemagoonbgjibgfcfkmjfli",
+            file: "assets/theme-CfZJdCqo.js"
