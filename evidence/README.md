@@ -1,13 +1,13 @@
 # Evidence ledger and publication record
 
-This ledger distinguishes recorded runtime observations, captured code, derived measurements and external statements. It includes selected excerpts and reviewed images. The four reviewed source-code and console-log attachments are available under descriptive names in [source-files](source-files/README.md). Full private conversation records, personal session payloads and the installed-extension inventory are excluded.
+This ledger distinguishes recorded runtime observations, captured code, derived measurements and external statements. It includes selected excerpts and reviewed images. The three retained source-code and failure-stack attachments are available under descriptive names in [source-files](source-files/README.md). Full private conversation records, personal session payloads and the installed-extension inventory are excluded.
 
 ## Evidence map
 
 | ID | Claim or artifact | Source locator | Interpretation and limit |
 |---|---|---|---|
-| E01 | Repeated `chrome-extension://invalid/` failures | Original console screenshot; [extension-probe-failure-stack.txt](source-files/extension-probe-failure-stack.txt), beginning of file | Shows failed extension-resource requests and initiator chain. Counter is not a catalogue measurement. |
-| E02 | Specific ID/path probes | [extension-probe-console-log.txt](source-files/extension-probe-console-log.txt), 11,329 lines | Offline extraction finds 175 unique valid extension IDs in URLs. Every extracted ID/path pair matches the exported catalogue. Partial log only. |
+| E01 | Repeated `chrome-extension://invalid/` failures | [extension-probe-failure-stack.txt](source-files/extension-probe-failure-stack.txt), beginning of file | Shows failed extension-resource requests and initiator chain. Counter is not a catalogue measurement. |
+| E02 | Specific ID/path probes | [probe-observations.json](probe-observations.json), extracted from the omitted 11,329-line log | Offline extraction finds 175 unique valid extension IDs in URLs. Every extracted ID/path pair matches the exported catalogue. Partial log only. |
 | E03 | `o.length` returned `4934`; `o` exported as JSON | Conversation record: console command beginning `o.length`; later `copy(JSON.stringify(o, null, 2))`; `linkedin-extension-catalog.json` | File independently parses to 4,934 unique pairs, IDs sorted ascending. `copy()` returning `undefined` is not a failed export. |
 | E04 | Parallel and sequential active detectors | [extension-detection-source.txt](source-files/extension-detection-source.txt), lines 5–51; published [detectors.js](detectors.js) lines 1–47 | Runtime/browser guards, fetch predicates, stagger and idle-callback options, AedEvent guard. |
 | E05 | Passive detector | [extension-detection-source.txt](source-files/extension-detection-source.txt), lines 52–82; published [detectors.js](detectors.js) lines 48–78 | Recursive document traversal, token extraction and SpectroscopyEvent guard. |
@@ -62,13 +62,14 @@ The final request's encoded payload was readable as structured data; encoding wa
 | Account, locale, timezone and personal browsing context | Unnecessary values omitted. `accountType: 'FLAGSHIP'` retained as detector metadata; it is a product/account-type label, not a member identifier. |
 | Local browser paths and my full installed-extension inventory | Omitted. Public target catalogue must not be confused with that private inventory. |
 | Public catalogue IDs and relative resource paths | Retained unchanged. These identify probe targets, not my installed extensions. |
-| Two selected screenshots | Inspected visually and copied unchanged. They show source/console evidence without names, account IDs, session tokens or a personal URL bar. |
+| Active event-guard screenshot | Inspected visually and copied unchanged. Shows code and its breakpoint without names, account IDs, session tokens or a personal URL bar. |
+| Full console log and console screenshot | Omitted to minimize unnecessary browser context and unrelated errors. The 175 target records and a separate failure stack preserve the relevant probe evidence. |
 | Other screenshots and raw conversation exports | Not included. No synthetic screenshots were substituted for missing runtime evidence. |
 
 The source inventory hashes in [source-manifest.json](source-manifest.json) identify both the included source files and excluded private artifacts. Each included file has a repository path; excluded artifacts have a null path. Hashes do not authenticate the origin of the material and are not a substitute for retaining originals privately.
 
 ## Limits of visual evidence
 
-The article includes two original screenshots, a reconstructed flowchart, a resource-type table and verified examples. The empty detector results are preserved in console transcriptions; no screenshot showing both results together is included.
+The article includes one original screenshot, a reconstructed flowchart, a resource-type table and verified examples. The empty detector results are preserved in console transcriptions; no screenshot showing both results together is included.
 
 A filtered Network view with no visible matches would not establish that nothing was sent through another endpoint. Functional-category proportions cannot be established for the full catalogue because 4,924 identities remain unresolved; resource-suffix proportions are measured directly.

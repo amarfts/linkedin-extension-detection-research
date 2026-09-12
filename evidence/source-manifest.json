@@ -22,8 +22,8 @@
       "source_label": "console-probes.png",
       "bytes": 89451,
       "sha256": "f55524868a906045f0e482794842c1263989dadb83c27b256225aed3b92bfad8",
-      "publication_treatment": "Copied unchanged as evidence/console-probes.png",
-      "repository_path": "evidence/console-probes.png"
+      "publication_treatment": "Omitted to minimize unnecessary browser-interface context; failure evidence retained in the separate text stack.",
+      "repository_path": null
     },
     {
       "role": "guard-screenshot",
@@ -62,8 +62,8 @@
       "source_label": "extension-probe-console-log.txt",
       "bytes": 477324,
       "sha256": "862c74a4508f2c611ced0336ebedec377d8d66507c8ef1b1096e73d86317eb3b",
-      "publication_treatment": "Reviewed and copied unchanged under a descriptive filename; original source line numbers preserved.",
-      "repository_path": "evidence/source-files/extension-probe-console-log.txt"
+      "publication_treatment": "Full raw log omitted. All 175 probe targets and original line numbers retained in evidence/probe-observations.json; repeated stacks and unrelated errors excluded.",
+      "repository_path": null
     },
     {
       "role": "menu-screenshot",
