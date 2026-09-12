@@ -1,0 +1,75 @@
+{
+  "note": "Digests computed on original supplied attachments; local source paths intentionally omitted. Conversation-based observations are separately located in the evidence ledger.",
+  "artifacts": [
+    {
+      "role": "catalogue",
+      "source_label": "linkedin-extension-catalog.json",
+      "bytes": 453368,
+      "sha256": "59c7ed3ff65e7c69f6da3a7f132638ee919625702b1582b3d77064c0237147f3",
+      "publication_treatment": "Copied unchanged to data/"
+    },
+    {
+      "role": "network-screenshot",
+      "source_label": "f44d6ef0-2c04-4cd5-8d9c-d9aa30ff2a44.png",
+      "bytes": 50706,
+      "sha256": "a85d13d95b15fb563f96e7c0f413014e515e5323aafa4c549a342b0cba5acc46",
+      "publication_treatment": "Reviewed; not published"
+    },
+    {
+      "role": "console-screenshot",
+      "source_label": "269e555a-3674-4d77-b863-733a82204e59.png",
+      "bytes": 89451,
+      "sha256": "f55524868a906045f0e482794842c1263989dadb83c27b256225aed3b92bfad8",
+      "publication_treatment": "Copied unchanged as evidence/console-probes.png"
+    },
+    {
+      "role": "guard-screenshot",
+      "source_label": "980e691e-9b77-4100-ac9b-eb5b43862972.png",
+      "bytes": 56837,
+      "sha256": "ed78783aa3c74054facf033629d0452e0ed931025e1cc5f02d8ebf31b2982f48",
+      "publication_treatment": "Copied unchanged as evidence/aed-event-guard.png"
+    },
+    {
+      "role": "failure-stack",
+      "source_label": "Texte colle(3).txt",
+      "bytes": 16217,
+      "sha256": "694f47f342a09ed02bf2606e84d16875eafe46f513da60b4b4b4ed12337dea42",
+      "publication_treatment": "Partial quotation only"
+    },
+    {
+      "role": "detector-source",
+      "source_label": "Texte colle(2).txt",
+      "bytes": 12571,
+      "sha256": "e2f28272226c2c9dd6060ca301bf57ed67baf755b017fe9792ee959fe5fdc972",
+      "publication_treatment": "Lines 5-82 published as evidence/detectors.js"
+    },
+    {
+      "role": "integration-source",
+      "source_label": "Texte colle.txt [13666 bytes]",
+      "bytes": 13666,
+      "sha256": "7277481b866c91c1834da27ff55e92d8fab3aae5820955a0c016fffae6f0fd14",
+      "publication_treatment": "Referenced; not redistributed"
+    },
+    {
+      "role": "partial-console-log",
+      "source_label": "Texte colle.txt [477324 bytes]",
+      "bytes": 477324,
+      "sha256": "862c74a4508f2c611ced0336ebedec377d8d66507c8ef1b1096e73d86317eb3b",
+      "publication_treatment": "Measured; raw log not redistributed"
+    },
+    {
+      "role": "menu-screenshot",
+      "source_label": "a95fad4c-6f5f-4a18-ae67-e85c472491a2.png",
+      "bytes": 11051,
+      "sha256": "d840746ec62e74abbcf5e05092f8fb71b5d33350a4ab2dc496e3aaaac64bc255",
+      "publication_treatment": "Reviewed; not published"
+    },
+    {
+      "role": "private-extension-inventory",
+      "source_label": "Fichier markdown.md colle",
+      "bytes": 35423,
+      "sha256": "030c62399eeb7ecd35ed692a0bbcd329305c8981732d453b839702d7a064bedd",
+      "publication_treatment": "Private reference; not redistributed"
+    }
+  ]
+}

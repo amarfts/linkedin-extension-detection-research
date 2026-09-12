@@ -1,0 +1,882 @@
+{
+  "source_sha256": "862c74a4508f2c611ced0336ebedec377d8d66507c8ef1b1096e73d86317eb3b",
+  "extraction": "For each source line, capture chrome-extension:// followed by a 32-character a-p ID and the remainder of that line as the resource path; preserve spaces within paths.",
+  "note": "URLs observed in the saved partial console log; no success result or full-run coverage inferred. Unrelated console content omitted.",
+  "observations": [
+    {
+      "source_line": 159,
+      "id": "aaaeoelkococjpgngfokhbkkfiiegolp",
+      "file": "icon/16.png"
+    },
+    {
+      "source_line": 294,
+      "id": "aabfjmnamlihmlicgeoogldnfaaklfon",
+      "file": "Assets/48.png"
+    },
+    {
+      "source_line": 431,
+      "id": "aacbpggdjcblgnmgjgpkpddliddineni",
+      "file": "sidebar.html"
+    },
+    {
+      "source_line": 567,
+      "id": "aafaommkbfcekikjalmjhimibmoppdpg",
+      "file": "favicon.png"
+    },
+    {
+      "source_line": 703,
+      "id": "aagiojdphcbpafnpcniokdjcpfdphjgk",
+      "file": "command-palette.html"
+    },
+    {
+      "source_line": 839,
+      "id": "aahmajgibhnecmilcmhhpijkemgpkojl",
+      "file": "callback.html"
+    },
+    {
+      "source_line": 975,
+      "id": "aahogoflghpjkacghggcdcolicipmfpi",
+      "file": "popup.html"
+    },
+    {
+      "source_line": 1111,
+      "id": "aaibendpbhlnjijpkcclimejomaeenlk",
+      "file": "icons/icon-16.png"
+    },
+    {
+      "source_line": 1247,
+      "id": "aaiicdofoildjkenjdeoenfhdmajchlm",
+      "file": "css/popup.css"
+    },
+    {
+      "source_line": 1383,
+      "id": "aainjnbelendpglgndeecjljppfgapoh",
+      "file": "images/ic_16.png"
+    },
+    {
+      "source_line": 1519,
+      "id": "aajeioaakaifilihejpjaohomikfinhj",
+      "file": "assets/icons/close.svg"
+    },
+    {
+      "source_line": 1655,
+      "id": "aaknjchbdogbhlildibimnaimedkohjl",
+      "file": "assets/auth.js"
+    },
+    {
+      "source_line": 1791,
+      "id": "aaknmcfmalngompbpgmdgemkeonohiec",
+      "file": "JokeBox128.png"
+    },
+    {
+      "source_line": 1927,
+      "id": "aakppdkgemboafgliiilljegffnaokbp",
+      "file": "vector-logo.png"
+    },
+    {
+      "source_line": 2063,
+      "id": "aalmdggecnmihdnlloomafhmdlnjadgm",
+      "file": "popover.htm"
+    },
+    {
+      "source_line": 2199,
+      "id": "aaogndnbeimijicahonifekmiepidcoi",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 2335,
+      "id": "aaoocbpffdjkmdhffdmblfoombokbmgn",
+      "file": "icon/16.png"
+    },
+    {
+      "source_line": 2471,
+      "id": "aaoogilmfmepcikcbpdphkljlndmajbh",
+      "file": "img/logo-128.png"
+    },
+    {
+      "source_line": 2607,
+      "id": "aapfglkgnhmiaabhiijkjpfmhllaodgp",
+      "file": "assets/icon.png"
+    },
+    {
+      "source_line": 2743,
+      "id": "aapnkmbnnnmejkpibpkicknnpffgdahe",
+      "file": "assets/storage-B1iVRhWv.js"
+    },
+    {
+      "source_line": 2879,
+      "id": "abbbgckfinjdbndjjjlpkkkoefklnaih",
+      "file": "logo.png"
+    },
+    {
+      "source_line": 3015,
+      "id": "abbebmjcogdiiloefijmdoekhienoiid",
+      "file": "sidebar.html"
+    },
+    {
+      "source_line": 3151,
+      "id": "abbmdcifbelkljlkhepiloikfbdbaggg",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 3287,
+      "id": "abdalefggkmddnicfhgngmdoggcbopai",
+      "file": "images/sync webhooks.svg"
+    },
+    {
+      "source_line": 3423,
+      "id": "abejnndlhcocgbacajcleifecmkfkdmm",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 3559,
+      "id": "abfehdblmlodmieppijjflnfbjhedcde",
+      "file": "static/twitter_lib.js"
+    },
+    {
+      "source_line": 3695,
+      "id": "abgkkhnmjpceoghkdlgnkoiebmmhlmkg",
+      "file": "icons/16.png"
+    },
+    {
+      "source_line": 3831,
+      "id": "abgngiafkeiflpophlalfljcoaebhjcg",
+      "file": "contentscripts/GmailApi.js"
+    },
+    {
+      "source_line": 3967,
+      "id": "abifklngoiboodedmgnebekjdfjbkohd",
+      "file": "network-interceptor.js"
+    },
+    {
+      "source_line": 4103,
+      "id": "abijkldnhhcihcfdalfmpbehenfnecmo",
+      "file": "jobs-search-filter.7f007489.png"
+    },
+    {
+      "source_line": 4239,
+      "id": "abkccndhocmfdombbpmnhfjidcdcjjeo",
+      "file": "app_icons/16x16.png"
+    },
+    {
+      "source_line": 4375,
+      "id": "ablcaiiaindkdmgafngbojbbggjocplc",
+      "file": "icon/16.png"
+    },
+    {
+      "source_line": 4511,
+      "id": "ablfgphjibcgmjcflkflckpoeojilojg",
+      "file": "images/flowq-icon-white.png"
+    },
+    {
+      "source_line": 4647,
+      "id": "ablhkpojbaponedckeonecobjinfjfml",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 4783,
+      "id": "abmaifkamkbggpdfgejbilmakhaljkag",
+      "file": "icons/icon-16.png"
+    },
+    {
+      "source_line": 4920,
+      "id": "abmccifgihbepfbjnefeigpaloddckle",
+      "file": "popup.js"
+    },
+    {
+      "source_line": 5056,
+      "id": "abmlacmengcbgmnbcodefiefmalhdlnb",
+      "file": "logo.png"
+    },
+    {
+      "source_line": 5192,
+      "id": "abocjojdmemdpiffeadpdnicnlhcndcg",
+      "file": "global/options/social_options.json"
+    },
+    {
+      "source_line": 5328,
+      "id": "abookilbfdoeggkjjfmmlmnjpehbdall",
+      "file": "coffee_logo.png"
+    },
+    {
+      "source_line": 5464,
+      "id": "abpgbcahebodigblhhmldopobepeaohg",
+      "file": "content.css"
+    },
+    {
+      "source_line": 5600,
+      "id": "acabidngelopojhikjgkacpbjhgjebog",
+      "file": "js/refresh.js"
+    },
+    {
+      "source_line": 5736,
+      "id": "acackkdpiddedeionboakefkpfflkcfc",
+      "file": "assets/favicon.png"
+    },
+    {
+      "source_line": 5872,
+      "id": "acajjofblcpdnfgofcmhgnpcbfhmfldc",
+      "file": "images/logo_text.svg"
+    },
+    {
+      "source_line": 6008,
+      "id": "acanjkninedildifonghlpibjdgidnil",
+      "file": "icons/16x16.png"
+    },
+    {
+      "source_line": 6144,
+      "id": "acbkoglpbifchpodigkdamcmkakjenpk",
+      "file": "popup/popup.html"
+    },
+    {
+      "source_line": 6280,
+      "id": "acbkphafegncebaffomiebcnleepafcn",
+      "file": "icons/icon-16.png"
+    },
+    {
+      "source_line": 6416,
+      "id": "acbnaejhdjglfpndplmclndkohinjdmb",
+      "file": "icon16.png"
+    },
+    {
+      "source_line": 6552,
+      "id": "accbghdhdmdigaohfaggdcnjlifdclbc",
+      "file": "resume/resume.html"
+    },
+    {
+      "source_line": 6688,
+      "id": "acdeomnoanhhhljmkggdnicljabbnpia",
+      "file": "icons/icon128.png"
+    },
+    {
+      "source_line": 6824,
+      "id": "acdgkiapikhobpffkkkhohhkcmmkomif",
+      "file": "logo.svg"
+    },
+    {
+      "source_line": 6960,
+      "id": "aceohhcgmceafglcfiobamlbeklffhna",
+      "file": "assets/wp-linkedin-main.js-B-nmK22z.js"
+    },
+    {
+      "source_line": 7096,
+      "id": "acfhjcapfkflfjdgcmhfnjhmjhagllgn",
+      "file": "index.css"
+    },
+    {
+      "source_line": 7232,
+      "id": "acfiidfflepfnmbedjopglngghgkhfnp",
+      "file": "icons/logo_48.png"
+    },
+    {
+      "source_line": 7368,
+      "id": "acgbggfkaphffpbcljiibhfipmmpboep",
+      "file": "icons/logo.png"
+    },
+    {
+      "source_line": 7504,
+      "id": "acgbmlopjnfendnddifojknockhijpoe",
+      "file": "saved-summaries.html"
+    },
+    {
+      "source_line": 7640,
+      "id": "achoaangannjppfhglcainjfociamhah",
+      "file": "images/logo.png"
+    },
+    {
+      "source_line": 7776,
+      "id": "achpeojkcegknojbcoiblgikjiglccmm",
+      "file": "src/content/content-styles.css"
+    },
+    {
+      "source_line": 7912,
+      "id": "acibdnpkjbomcoklneaabcccpppfomgl",
+      "file": "auth-callback.html"
+    },
+    {
+      "source_line": 7915,
+      "id": "acjkfmnbignocfakclealmabijofkaba",
+      "file": "public/icon-48.png"
+    },
+    {
+      "source_line": 7918,
+      "id": "ackpianjmopgdngjckgaaogdhjejfobo",
+      "file": "DEBUG.md"
+    },
+    {
+      "source_line": 7921,
+      "id": "aclgcfmciekojimhckimdcapkejceili",
+      "file": "index.html"
+    },
+    {
+      "source_line": 7924,
+      "id": "aclggegmkfilhcaikepgpoihpnicbhfc",
+      "file": "focus-blocked.html"
+    },
+    {
+      "source_line": 7927,
+      "id": "acmbfggokaabfndehodmoekhccfnphel",
+      "file": "dist/updates.html"
+    },
+    {
+      "source_line": 7930,
+      "id": "acngkekifighepenafoohemoelhgkkjd",
+      "file": "icons/icon-16.png"
+    },
+    {
+      "source_line": 7933,
+      "id": "acnkkaihdkcocdoenhgdcgnmpobjmgdo",
+      "file": "images/modalIcon.svg"
+    },
+    {
+      "source_line": 7936,
+      "id": "acnniakgdcfllldlheplgpebcimfimde",
+      "file": "editor/editor.html"
+    },
+    {
+      "source_line": 7939,
+      "id": "acnphecabcfkmgimbdiiclonciljngkd",
+      "file": "logo.c6e6db08.png"
+    },
+    {
+      "source_line": 7942,
+      "id": "acpebglhoolnpnegdapfdhgbnpelafem",
+      "file": "icons/icon-16.svg"
+    },
+    {
+      "source_line": 7945,
+      "id": "acpmbealinmmhiideffdijdfmhbenail",
+      "file": "assets/linkedin.js-8dRDnjB_.js"
+    },
+    {
+      "source_line": 7948,
+      "id": "adcdekdoblmapmohiejneabifojccdoh",
+      "file": "images/icon-48.png"
+    },
+    {
+      "source_line": 7951,
+      "id": "adcghgjkkjkdmccfodohddgagangeacb",
+      "file": "loading.svg"
+    },
+    {
+      "source_line": 7954,
+      "id": "adeogdcibcngnkofabmpicgohlpcopmg",
+      "file": "icons/16.png"
+    },
+    {
+      "source_line": 7957,
+      "id": "adfonhibhmdhekclipmmabkkganiphbb",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 7960,
+      "id": "adgpinopckdedhegddlhnafnkmojmkih",
+      "file": "magnet-16.png"
+    },
+    {
+      "source_line": 7963,
+      "id": "adhgifgmkblkmejdgiplocmdjbbibkip",
+      "file": "src/ui/bubble/popup.html"
+    },
+    {
+      "source_line": 7966,
+      "id": "adhmloemidemagoonbgjibgfcfkmjfli",
+      "file": "assets/theme-CfZJdCqo.js"
+    },
+    {
+      "source_line": 7969,
+      "id": "adiajelngjekldhdbgjiabomnckncofh",
+      "file": "fcm-permission.html"
+    },
+    {
+      "source_line": 7972,
+      "id": "adiikgmaiadcllnhkeclpacjoaaepanl",
+      "file": "popup.css"
+    },
+    {
+      "source_line": 7975,
+      "id": "adkamekmmggcnjknjdemldbajhlhcabn",
+      "file": "img/icon/default16.png"
+    },
+    {
+      "source_line": 7978,
+      "id": "adkamkdaglbaejnfobbahegfiinjonme",
+      "file": "content-scripts/messageBox.html"
+    },
+    {
+      "source_line": 7981,
+      "id": "aeaebnhpklpmlflclnlgdnfapkbalgbb",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 7984,
+      "id": "aebakbnmlhcniblplmfagjkidkanooom",
+      "file": "assets/icon-48.png"
+    },
+    {
+      "source_line": 7987,
+      "id": "aebgppnpcdfepaphffolcknaflehmnmn",
+      "file": "imgs/talia-head-neutral.png"
+    },
+    {
+      "source_line": 7990,
+      "id": "aebjdjjodmkdnmejakflnfpkadblfmdh",
+      "file": "assets/opensauced-icon.1c00b909.svg"
+    },
+    {
+      "source_line": 7993,
+      "id": "aecnknpdmopjemcdadfnlpoeldnehljp",
+      "file": "icon-16.png"
+    },
+    {
+      "source_line": 7996,
+      "id": "aeddihecploomdndlodecnopbeckjnmo",
+      "file": "personalities.js"
+    },
+    {
+      "source_line": 7999,
+      "id": "aedlcpfljmnancalemghmjjmceafemgj",
+      "file": "index.html"
+    },
+    {
+      "source_line": 8002,
+      "id": "aeeccphegbhmemmjncggcjlieanbkcmg",
+      "file": "sidebar.html"
+    },
+    {
+      "source_line": 8005,
+      "id": "aeemmefmpkgmokecemoedojagcecabmj",
+      "file": "content.styles.css"
+    },
+    {
+      "source_line": 8008,
+      "id": "aeidadjdhppdffggfgjpanbafaedankd",
+      "file": "inject.js"
+    },
+    {
+      "source_line": 8011,
+      "id": "aekfcfhcabieahgbhipgjcknkcdjccla",
+      "file": "success.html"
+    },
+    {
+      "source_line": 8014,
+      "id": "aeknjcfhhalamhklidjhlmncaobgigbe",
+      "file": "icon-16.png"
+    },
+    {
+      "source_line": 8017,
+      "id": "aelbikhbnapjfdmifhedbmlbjphfcibo",
+      "file": "onboarding/onboarding.html"
+    },
+    {
+      "source_line": 8021,
+      "id": "aelljdlolpakdoeongoklpkheedfjkio",
+      "file": "careerio.svg"
+    },
+    {
+      "source_line": 8026,
+      "id": "aelnanjnemfdfmhbokblbpjpfflkndbi",
+      "file": "index.html"
+    },
+    {
+      "source_line": 8029,
+      "id": "aepdagkfkllhejenkakmbllgkbofndfb",
+      "file": "scripts/page-world-shim.js"
+    },
+    {
+      "source_line": 8032,
+      "id": "aepgokioibdanpehhcpdmmddhfnombaa",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 8035,
+      "id": "afabncndnlipbonmgbjjcfddjhpmlgeo",
+      "file": "js/jquery-1.11.3.min.js"
+    },
+    {
+      "source_line": 8038,
+      "id": "afahlliooeebnifondmbhcaghcapepbm",
+      "file": "assets/logo.png"
+    },
+    {
+      "source_line": 8041,
+      "id": "afamnplaihcooabmcgdipobiffcbcfgp",
+      "file": "images/icon.png"
+    },
+    {
+      "source_line": 8044,
+      "id": "afanclaeblefeaiaeeimnfdkmlodnned",
+      "file": "Images/Icon16.png"
+    },
+    {
+      "source_line": 8047,
+      "id": "afapimbonnddpakkhijfjcinbkfcejin",
+      "file": "icon16.png"
+    },
+    {
+      "source_line": 8050,
+      "id": "afemibdfbljmhkcbdppaibiipnbkioom",
+      "file": "mmt-srcwl-grurdoziruhsbnwg/icon128.png"
+    },
+    {
+      "source_line": 8053,
+      "id": "afengldfkmjmfagffcimbieogjolmegj",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 8056,
+      "id": "afgijdmbmaojooajcjpeoldddggaiaof",
+      "file": "offscreen.html"
+    },
+    {
+      "source_line": 8059,
+      "id": "afgjokfmplfblobgdmddbmoflaajljjf",
+      "file": "dist/js/index.js"
+    },
+    {
+      "source_line": 8062,
+      "id": "afifopkkpjbllcabnbfkchepojjjpjcc",
+      "file": "icon256.ffdd7d6b.png"
+    },
+    {
+      "source_line": 8065,
+      "id": "afiiebkndlkhnpbekkheibhfjfnbcnem",
+      "file": "icon-128.png"
+    },
+    {
+      "source_line": 8068,
+      "id": "afkdgeafbledfcnlpkgomgafiheimodb",
+      "file": "images/16x16.png"
+    },
+    {
+      "source_line": 8071,
+      "id": "aflfcbhlpjnhjolcddebeoedcekilmhj",
+      "file": "img/icon/default16.png"
+    },
+    {
+      "source_line": 8074,
+      "id": "afongcbeehdojkbgbjhfhiccekbebfhp",
+      "file": "logo.png"
+    },
+    {
+      "source_line": 8077,
+      "id": "afpcldgfpenbbdocpbibefjajfplojmj",
+      "file": "icons/favicon-16x16.png"
+    },
+    {
+      "source_line": 8080,
+      "id": "agbedoaclglejmbkokfepjbaaofgfjfo",
+      "file": "icon-128.png"
+    },
+    {
+      "source_line": 8083,
+      "id": "agboclnmnkhajdbkeakdjoancipehghk",
+      "file": "browser-polyfill.js"
+    },
+    {
+      "source_line": 8086,
+      "id": "agdbdklledbbklajhmofammnpakhgpgn",
+      "file": "fonts/Gilroy-Bold.ttf"
+    },
+    {
+      "source_line": 8089,
+      "id": "agdddnmdjmljkjeglnidfpmpenbimmmn",
+      "file": "imgs/final.png"
+    },
+    {
+      "source_line": 8092,
+      "id": "agefdbleblfgnjbdicaikkkjecbdjeoa",
+      "file": "icon16.plasmo.6c567d50.png"
+    },
+    {
+      "source_line": 8095,
+      "id": "agghbaheofcoecndkbflbnggdjcmiaml",
+      "file": "assets/images/hide-n-seek-icon-16.png"
+    },
+    {
+      "source_line": 8098,
+      "id": "aghecbbndiofepdfmfjmjmooknnaaojj",
+      "file": "webviewer.html"
+    },
+    {
+      "source_line": 8101,
+      "id": "aghikalamngfkggdmnceiddepfoogdhp",
+      "file": "src/css/injected.css"
+    },
+    {
+      "source_line": 8104,
+      "id": "aghocgidojdkghacmpmhbifanfkfddbe",
+      "file": "mmt-srcwl-qlpnqhmbmhznlsxx/icon128.png"
+    },
+    {
+      "source_line": 8107,
+      "id": "agjeghedmcjaacpeoolmpgahegijhgpk",
+      "file": "assets/index-DgZXh0UX.js"
+    },
+    {
+      "source_line": 8110,
+      "id": "agleiimpggapjekcdhdjbmegjbbkleie",
+      "file": "frame.html"
+    },
+    {
+      "source_line": 8113,
+      "id": "aglmggedobppijenijohiefklpckopef",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 8116,
+      "id": "agmaghccegkmhekadhflieagbigdokig",
+      "file": "content.js"
+    },
+    {
+      "source_line": 8119,
+      "id": "agmmoloaaenmiknkmijheannccbpdafm",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 8122,
+      "id": "agockglfjmbbjphdfapjhndnocmhbfph",
+      "file": "icons/radar-mark.svg"
+    },
+    {
+      "source_line": 8127,
+      "id": "agongpkomhknjjihomgnggamckaelnnn",
+      "file": "overlay.css"
+    },
+    {
+      "source_line": 8130,
+      "id": "ahahliplongfboaikbajdedefpoifjeb",
+      "file": "assets/content.ts-Dm6EFiQx.js"
+    },
+    {
+      "source_line": 8133,
+      "id": "ahanmpbplnimjdojgkldppkbngpdhpgo",
+      "file": "assets/style.css"
+    },
+    {
+      "source_line": 8136,
+      "id": "ahbaomfclkbgaadpmlcmlchhcgfibfld",
+      "file": "mmt-srcwl-czwxkfyfdb-xsybj/icon128.png"
+    },
+    {
+      "source_line": 8272,
+      "id": "ahcdikceakfllokhdljbpjaflpebmdfi",
+      "file": "public/logo.png"
+    },
+    {
+      "source_line": 8408,
+      "id": "ahcdklienniemkfhkkfeplmhjfkgdmnl",
+      "file": "icons/Crust-Logo-16-Dark.png"
+    },
+    {
+      "source_line": 8544,
+      "id": "ahcknhhmblfbiognedmcghlcmcdobkmo",
+      "file": "data/layoffs.json"
+    },
+    {
+      "source_line": 8680,
+      "id": "ahdlpamjokpkkkmfcpfpponbijghhmja",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 8816,
+      "id": "ahemfdpnnfofllkdngmflfflpnkjnfek",
+      "file": "icon.png"
+    },
+    {
+      "source_line": 8952,
+      "id": "ahfilmopkkfaehndncopogaohdkddjjd",
+      "file": "assets/common.css"
+    },
+    {
+      "source_line": 9088,
+      "id": "ahgjbbnglgnladgimapeecjmhlhmacgg",
+      "file": "pearmill.png"
+    },
+    {
+      "source_line": 9224,
+      "id": "ahgmdkpalffekkihpbccafpkfiegcbbl",
+      "file": "callback/callback.html"
+    },
+    {
+      "source_line": 9360,
+      "id": "ahhkeamidjgdgbafglmkpgnnlhadibdg",
+      "file": "icons/16.png"
+    },
+    {
+      "source_line": 9496,
+      "id": "ahidkiepeifmcimdoiofliojopdaggbd",
+      "file": "assets/icons/icon_16.png"
+    },
+    {
+      "source_line": 9632,
+      "id": "ahjbffbpifndaagokhldcaalpegbhpkd",
+      "file": "content-scripts/enhancer.css"
+    },
+    {
+      "source_line": 9768,
+      "id": "ahjlbiklhpcoppjppenimojlglpckhbc",
+      "file": "css/main.css"
+    },
+    {
+      "source_line": 9904,
+      "id": "ahjppllajdagpijnbekhgojjadoambij",
+      "file": "content.js"
+    },
+    {
+      "source_line": 10040,
+      "id": "ahkanmhadkofolbaokeahjampgkfdami",
+      "file": "assets/icons/expandMoreIcon.svg"
+    },
+    {
+      "source_line": 10176,
+      "id": "ahkdkfejeplinhgmclegkhopdiiedeji",
+      "file": "icons/header-logo.png"
+    },
+    {
+      "source_line": 10312,
+      "id": "ahkgfeaondknnomofelaogdefndmapak",
+      "file": "listener.js"
+    },
+    {
+      "source_line": 10448,
+      "id": "ahkmpgpdcneppdhhdgmmmcgicgfcfmka",
+      "file": "src/icons/arrow-down.svg"
+    },
+    {
+      "source_line": 10584,
+      "id": "ahmagnclomjbhbchlllnhmiampgchnop",
+      "file": "dashboard.html"
+    },
+    {
+      "source_line": 10720,
+      "id": "ahndflgikehkheomifdeoojgighdjndm",
+      "file": "pdf.worker.js"
+    },
+    {
+      "source_line": 10856,
+      "id": "ahnnnalmdcgnijmnjfhgaickghbdfbjm",
+      "file": "icons/icons-128.png"
+    },
+    {
+      "source_line": 10992,
+      "id": "ahnppangepljolnbpakbeljlpkeinhcd",
+      "file": "icons/icon128.png"
+    },
+    {
+      "source_line": 11128,
+      "id": "ahoehnmiifgbcaklacfoeanlaiakpjge",
+      "file": "pdf.worker.min.js"
+    },
+    {
+      "source_line": 11264,
+      "id": "ahomgjfionfmfihbemfknafbnhkpklbd",
+      "file": "sidebar.html"
+    },
+    {
+      "source_line": 11267,
+      "id": "ahppdlbhcjjoejdnbdcjfgomokceflma",
+      "file": "icons/icon16.png"
+    },
+    {
+      "source_line": 11270,
+      "id": "aibemkflighjgchjmikiljjagkjbmjbg",
+      "file": "images/newIco.svg"
+    },
+    {
+      "source_line": 11273,
+      "id": "aibjkmohlabhngalhghifpnaamigomac",
+      "file": "icon16.png"
+    },
+    {
+      "source_line": 11276,
+      "id": "aicgfjkeikpppglfdhmdgncaiemeenon",
+      "file": "assets/button.png"
+    },
+    {
+      "source_line": 11279,
+      "id": "aichbkhiikgafcdkmopdlmbfmnokmeel",
+      "file": "assets/vendor-user-settings-BaYGmMXk.js"
+    },
+    {
+      "source_line": 11282,
+      "id": "aicinfjgiebaoekhdgcgnjdkdhhmmkeb",
+      "file": "iconwhitelarge.png"
+    },
+    {
+      "source_line": 11285,
+      "id": "aidphokcgfdkdjfpkpklikbknkibkfpl",
+      "file": "assets/icons/16.png"
+    },
+    {
+      "source_line": 11288,
+      "id": "aielpkmgjjaddochapclgdhakecjloih",
+      "file": "assets/images/nixz-logo-16.png"
+    },
+    {
+      "source_line": 11291,
+      "id": "aifhcajcoagfelcebkhgmfchkakifelp",
+      "file": "icons/icon48.png"
+    },
+    {
+      "source_line": 11294,
+      "id": "aigjfdnfdepkdogdjcolehemlapfohem",
+      "file": "base64Images.js"
+    },
+    {
+      "source_line": 11297,
+      "id": "aigjjiagpdcedkjiikmepkldlegadhdj",
+      "file": "content.js"
+    },
+    {
+      "source_line": 11300,
+      "id": "aijamaighclmblhodjfmciapmkofhcpl",
+      "file": "icon/transplace_16.png"
+    },
+    {
+      "source_line": 11303,
+      "id": "aijkbfcgfacnbgaladlemlbonnddphdf",
+      "file": "utils/select-arrow.svg"
+    },
+    {
+      "source_line": 11306,
+      "id": "aikejcifhkhlogoejaibdilbeabkngca",
+      "file": "AILogo48.png"
+    },
+    {
+      "source_line": 11309,
+      "id": "aikhclibkhmmkpafjdchlnmemagbjgdk",
+      "file": "resources/img/copy_button.png"
+    },
+    {
+      "source_line": 11312,
+      "id": "aikkeehnlfpamidigaffhfmgbkdeheil",
+      "file": "assets/icons/active_bell_icon_dark_mode.png"
+    },
+    {
+      "source_line": 11315,
+      "id": "ajalnaafhnhcdkjjjppdjeejckbkemhc",
+      "file": "src/onboarding/index.html"
+    },
+    {
+      "source_line": 11318,
+      "id": "ajbhmciagbhndmfijmolmjfekajoegkp",
+      "file": "public/logo.png"
+    },
+    {
+      "source_line": 11321,
+      "id": "ajceemkmbgjolpocnkfccjmplcbbppel",
+      "file": "index.html"
+    },
+    {
+      "source_line": 11324,
+      "id": "ajeffabgdodbbdngakbpafbggnoegdjd",
+      "file": "icon16.plasmo.6c567d50.png"
+    },
+    {
+      "source_line": 11327,
+      "id": "ajehfdojkciheocnmhkbelgefjpepkde",
+      "file": "assets/icon.png"
+    }
+  ]
+}

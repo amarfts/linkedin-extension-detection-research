@@ -1,0 +1,2 @@
+# Preserve exact artifact bytes, including the hashed source catalogue.
+* -text

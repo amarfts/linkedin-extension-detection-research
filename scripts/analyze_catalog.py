@@ -1,0 +1,114 @@
+"""Offline analysis of the supplied catalogue. Python 3.10+; standard library only.
+
+No browser interaction, extension probing, or network requests. Paths are data.
+Functional labels come only from the manually reviewed, exact-ID lookup file.
+Filename tags are overlapping lexical hints, never functional classifications.
+"""
+import argparse
+import hashlib
+import json
+import re
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+RULES = {
+    "linkedin_jobs_sales_tokens": r"linkedin|recruit|prospect|sales|lead|job|career",
+    "scraping_automation_tokens": r"scrap|automat|crawler|selenium|puppeteer|playwright",
+    "blocking_privacy_tokens": r"adblock|blocker|privacy|tracking|tracker",
+    "email_crm_tokens": r"gmail|email|hubspot|salesforce|(?:^|[^a-z])crm(?:[^a-z]|$)",
+    "ai_tokens": r"chatgpt|copilot|(?:^|[^a-z])(?:ai|gpt|llm)(?:[^a-z]|$)",
+    "accessibility_tokens": r"accessib|dyslex|screenreader|neurodiver",
+    "wallet_crypto_tokens": r"wallet|crypto|bitcoin|ethereum|metamask",
+    "developer_network_tokens": r"devtools|debug|intercept|websocket|xhr",
+}
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--catalog", type=Path, default=ROOT / "data/linkedin-extension-catalog.json")
+    parser.add_argument("--lookup", type=Path, default=ROOT / "data/verified-extensions.json")
+    parser.add_argument("--out", type=Path, default=ROOT / "analysis")
+    args = parser.parse_args()
+    raw = args.catalog.read_bytes()
+    catalog = json.loads(raw)
+    if not isinstance(catalog, list) or not catalog:
+        raise ValueError("Expected a nonempty catalogue array")
+    for row in catalog:
+        if not isinstance(row, dict) or set(row) != {"id", "file"}:
+            raise ValueError("Unexpected catalogue schema")
+        if not isinstance(row["id"], str) or not re.fullmatch(r"[a-p]{32}", row["id"]):
+            raise ValueError("Invalid extension ID")
+        if not isinstance(row["file"], str) or not row["file"]:
+            raise ValueError("Expected a nonempty resource path")
+    lookup_rows = json.loads(args.lookup.read_text(encoding="utf-8"))
+    lookup = {r["id"]: r for r in lookup_rows}
+    ids = {r["id"] for r in catalog}
+    if len(lookup) != len(lookup_rows) or not set(lookup) <= ids:
+        raise ValueError("Lookup contains duplicate IDs or IDs absent from catalogue")
+    for r in lookup_rows:
+        if r["id"] not in r["source"]:
+            raise ValueError("Source URL must identify the exact extension")
+    annotated = []
+    suffixes, paths, tag_counts, categories = Counter(), Counter(), Counter(), Counter()
+    for number, row in enumerate(catalog, 1):
+        suffix = Path(row["file"]).suffix.lower() or "[none]"
+        tags = [name for name, pattern in RULES.items() if re.search(pattern, row["file"], re.I)]
+        verified = lookup.get(row["id"])
+        category = verified["category"] if verified else "Unresolved"
+        annotated.append({"row": number, **row, "resource_suffix": suffix,
+                          "path_hint_tags": tags, "functional_category": category,
+                          "identity_status": "verified_public_listing" if verified else "not_resolved_in_this_study",
+                          "public_metadata": verified})
+        suffixes[suffix] += 1
+        paths[row["file"]] += 1
+        tag_counts.update(tags)
+        categories[category] += 1
+    count = len(catalog)
+    summary = {
+        "catalog_sha256": hashlib.sha256(raw).hexdigest(),
+        "catalog_bytes": len(raw), "rows": count, "unique_ids": len(ids),
+        "unique_id_path_pairs": len({(r["id"], r["file"]) for r in catalog}),
+        "unique_paths": len(paths), "ids_sorted_ascending": [r["id"] for r in catalog] == sorted(r["id"] for r in catalog),
+        "verified_identities": len(lookup), "unresolved_identities": len(ids - set(lookup)),
+        "functional_category_counts_including_unresolved": dict(categories.most_common()),
+        "resource_suffix_counts": dict(suffixes.most_common()),
+        "path_hint_counts": {key: tag_counts[key] for key in RULES},
+        "rows_with_any_path_hint": sum(bool(r["path_hint_tags"]) for r in annotated),
+        "rows_without_path_hints": sum(not r["path_hint_tags"] for r in annotated),
+        "path_hint_rules": RULES,
+        "limitations": "Purposeful 10-ID sample; not representative. Filename tags overlap and can be false positives. Counts are neither upper nor lower bounds on functional categories. Resource availability was not tested."
+    }
+    args.out.mkdir(parents=True, exist_ok=True)
+    write_json(args.out / "summary.json", summary)
+    write_json(args.out / "catalog-annotated.json", annotated)
+    write_json(args.out / "resource-path-frequencies.json", dict(paths.most_common()))
+    lines = ["# Catalogue analysis", "", "Generated by `scripts/analyze_catalog.py`. All figures describe the supplied snapshot.", "",
+             f"**{count:,} rows; {len(ids):,} unique IDs; {len(paths):,} distinct resource paths.**", "",
+             f"Catalogue SHA-256: `{summary['catalog_sha256']}`", "", "## Resource suffixes", "",
+             "These describe the probed file, not the extension's purpose.", "", "| Suffix | Rows | Share |", "|---|---:|---:|"]
+    lines += [f"| `{k}` | {v:,} | {v/count:.2%} |" for k, v in suffixes.most_common()]
+    lines += ["", "## Filename hints", "", summary["limitations"], "", "| Hint | Rows | Regex (case insensitive) |", "|---|---:|---|"]
+    lines += [f"| {k} | {tag_counts[k]} | `{v.replace('|', '&#124;')}` |" for k, v in RULES.items()]
+    lines += ["", f"Any hint: {summary['rows_with_any_path_hint']:,} rows. No hint: {summary['rows_without_path_hints']:,} rows.", "",
+              "## Verified functional categories", "", "Counts describe only the reviewed sample; unresolved is explicit.", "", "| Category | Rows |", "|---|---:|"]
+    lines += [f"| {k} | {v:,} |" for k, v in categories.most_common()]
+    lines += ["", "## Verified examples", "", "Names and purposes reflect publisher listings checked 2026-09-12, not independently audited behavior.", "",
+              "| Row | Extension | Exact ID | Captured probe path | Category |", "|---:|---|---|---|---|"]
+    for row in annotated:
+        v = row["public_metadata"]
+        if v:
+            name = v["name"].replace("|", "&#124;")
+            lines.append(f"| {row['row']} | [{name}]({v['source']}) | `{row['id']}` | `{row['file']}` | {v['category']} |")
+    lines += ["", "## Most frequent exact paths", "", "| Path | Rows |", "|---|---:|"]
+    lines += [f"| `{k}` | {v:,} |" for k, v in paths.most_common(20)]
+    (args.out / "catalog-analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()
